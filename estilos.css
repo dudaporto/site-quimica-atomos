@@ -1,0 +1,359 @@
+﻿/*Confiurações gerais*/
+*{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  position: relative;
+  width: 100%;
+  height: 130px;
+  background-color: white;
+  margin-bottom: 60px;
+  box-shadow:  3px 3px 3px grey;
+}
+
+
+body{
+  background-image: url(imgs/fundo.jpg);
+}
+
+#conteudo{
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  min-height: 100%;
+  border-left: 1px solid #bdc3c7;
+  border-right: 1px solid #bdc3c7;
+  background-color: white;
+}
+article {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* estilização do menu*/
+#logo{
+  width: 300;
+  float: left;
+  margin-left: 40px;
+  margin-top: 10px;	
+	position: absolute;
+	z-index: 2;
+}
+
+.menu{
+  margin-right: 10%;
+  float: right;
+  margin-top: 75px;
+  z-index: 1;
+}
+.menu ul{
+      list-style: none;
+      position: relative;
+      margin-bottom: 0;
+}
+.menu ul li{
+      float: left;
+      transition: all 200ms ease;
+      width:120px;
+}
+
+.menu a{
+     padding: 15px;
+     display: block;
+     text-decoration: none;
+     text-align: center;
+     background-color: white;
+     color: black;
+     transition: all 200ms ease;
+     font-family: 'Raleway','Arial';
+}
+
+.menu a:hover{
+  background-color: #eee;
+}
+
+ul li:hover{
+  border-bottom: 3px solid black;
+}
+
+#teoricos:hover #submenu{
+  visibility: visible;
+}
+
+#submenu{
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+}
+#submenu a{
+  background-color: #eee;
+}
+#submenu a:hover{
+  background-color: #828282;
+  color: white;
+}
+#submenu li{
+  float: none;
+  border-bottom: 1px solid #828282;
+}
+
+/* visibilidade das páginas*/
+.aba-conteudo {
+  display: none;
+  height:100%;
+}
+
+.aba-conteudo.ativo {
+  display: block;
+}
+
+/*titulos*/
+h2{
+  font-family: 'Petit Formal Script', 'Arial';
+  font-size: 28pt;
+}
+
+h3{
+  font-family: 'Forum';
+  margin: 20px;
+}
+
+/*estilização da linha do tempo*/
+
+#linha-do-tempo{
+  width: 807px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  animation: aparecendo 3500ms ease-in-out 100ms 1 normal forwards;
+}
+
+#Home h2, #Home h3{
+  text-align: center;
+  animation: aparecendo 2000ms ease-in-out 100ms 1 normal forwards;
+}
+
+#seta{
+  width: 46px;
+  margin-top: 155px;
+  position: absolute;
+  left: -45px;
+  animation: vai-e-volta 1500ms ease 100ms infinite alternate;
+  cursor: pointer;
+  float: left;
+}
+@keyframes vai-e-volta {
+  to {opacity: 0.2;};
+  from{opacity: 1;};
+}
+
+#IMGlinha{
+  height: 190px;
+  display: block;
+  margin-top: 20%;
+}
+
+@keyframes aparecendo{
+	from {opacity: 0.1;};
+	to{opacity: 1;};
+}
+.linha{
+  float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.botao-teorico{
+  font-family: 'Zilla Slab', 'Arial';
+  font-weight: bold;
+  line-height: 1.5em;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 65px;
+  text-align: center;
+  color: black;
+  font-size: 14pt;
+  transition: all 200ms ease;
+}
+
+.botao-teorico:hover{
+  text-shadow: 3px 3px 2px #828282;
+}
+
+/* estilização das abas de teoria */
+
+.teorico{
+  margin: 55px;
+  width: 200px;
+  float: left;
+  position: relative;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 900ms ease;
+  box-shadow:  2px 2px 2px grey;
+}
+
+.teorico:hover{
+  top: -5px;
+  left: -1px;
+  box-shadow:  5px 15px 15px grey;
+}
+.aba-conteudo p, dd{
+    text-indent: 2em;
+}
+
+.descricao{
+  font-family: 'Zilla Slab', 'Arial';
+  font-weight: bold;
+  font-size: 13.8pt;
+  line-height: 1.8em;
+  text-align: justify;
+  width: 95%;
+  margin: 2% 5% 2% 2%;
+}
+
+.descricao img, iframe{
+  display: block;
+  margin: 40px auto;
+}
+iframe{
+  height: 280px;
+  width: 467px;
+}
+
+dt{
+  font-family: 'Kreon', 'Arial';
+  font-size: 14pt;
+}
+dt::before{
+  content: "- ";
+}
+dd::before{
+  content: "• ";
+}
+
+#Bohr p:nth-child(4){
+  font-size: 12pt;
+  width: 800px;
+  display: block;
+  margin: 0 10% 0 auto;
+  text-align: right;
+}
+
+#luz_bohr{
+  width: 550px;
+}
+
+#voltar-topo{
+  width: 40px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 2%;
+  right: 7%;
+  cursor: pointer;
+}
+/* estilização galeria de fotos*/
+
+.fotos{
+  display: block;
+  margin: 35px auto;
+  width: 640px;
+}
+.fotos img{
+  display: inline-block;
+}
+.anterior, .proximo{
+  width: 40px;
+  opacity: .2;
+  padding: 10px;
+  transition: all 200ms ease;
+  margin-bottom: 180px;
+
+}
+.anterior:hover, .proximo:hover{
+  opacity: .9;
+  cursor: pointer;
+}
+
+.anterior{
+  transform: rotate(180deg);
+}
+
+.slide{
+  width: 500px;
+}
+
+h4{
+    font-family: 'Petit Formal Script', 'Arial';
+    text-align: center;
+    font-weight: bold;
+    font-size: 18pt;
+    margin-bottom: 10px;
+}
+
+/* estilização da pagina sobre*/
+
+#Sobre h3{
+  font-size: 16pt;
+}
+
+.desenvolvedor{
+  margin: 35px 50px ;
+  height: 100px;
+}
+.desenvolvedor img{
+  width: 100px;
+  float: left;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow:  2px 2px 2px grey;
+}
+.nome {
+  font-family: 'Zilla Slab', 'Arial';
+  display: block;
+  font-size: 15pt;
+  margin-left: 8em;
+  font-weight:600;
+  padding-top: 20px;
+}
+ #Sobre .creditos{
+	 text-indent: 2em;
+	 line-height: 2.5em;
+	 font-family: 'Zilla Slab';
+	 font-size: 14pt;
+ }
+#Sobre p{
+  text-indent: 4em;
+  line-height: 2em;
+  font-size: 12.5pt;
+  font-family: 'Forum', 'Arial';
+}
+
+#Sobre .fonte, #Sobre #livro {
+  display: block;
+  line-height: 2em;
+  margin-left: 2em;
+  padding-left: 20px;
+  font-family: 'Forum', 'Arial';
+  color: black;
+  font-size: 13pt;
+}
+#Sobre #livro{
+  background-image: url(imgs/livro.png);
+  background-repeat: no-repeat;
+}
+#Sobre .fonte{
+  text-decoration: none;
+  background-image: url(imgs/links.png);
+  background-repeat: no-repeat;
+}
+
+#Sobre a:hover{
+  font-weight: bold;
+}
+#Sobre p a{
+	text-decoration: none;
+	color: black;
+ }
